@@ -1,0 +1,84 @@
+
+  <div style="margin-bottom: 3%" >
+    <div class="row Titoli">
+      <h1>Log In</h1>
+      <hr>
+    </div>
+    <br>
+
+    <form #postForm="ngForm" class="row Form col-md-8 col-md-offset-2" >                                        <!--inizio scatola log-in-->
+      <h1 class="Titoli">Sei già iscritto? Inserisci i tuoi dati:</h1>
+
+      <br>
+      <div class="row col-md-10 Scritte" >
+
+          <div class="form-group">                                                              <!--EMAIL-->
+            <div for="emaill" class="formLabels">Email</div>
+            <div *ngIf="emaill.invalid && (emaill.dirty || emaill.touched)" class="errori">
+              <div *ngIf="emaill.errors.required">
+                L'e-mail è necessaria per accedere
+              </div>
+              <div *ngIf="emaill.errors.pattern">
+                Utilizza una email con formato prova@mail.it
+              </div>
+            </div>
+            <input class="form-control"
+                   required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+                   type="email"
+                   id="emaill"
+                   name="emaill"
+                   #emaill="ngModel"
+                   [(ngModel)]="email"
+                   placeholder="prova@email.it">
+          </div>
+
+
+          <div class="form-group" style="margin-bottom: 3%">                                  <!--PASSWORD-->
+            <div for="password" class="formLabels">Password</div>
+            <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)" class="errori">
+              <div *ngIf="pwd.errors.required">
+                La password è necessaria per accedere
+              </div>
+              <div *ngIf="pwd.errors.minlength">
+                La password inserita è troppo corta (minimo 5 caratteri)
+              </div>
+            </div>
+            <input type="password"
+                   class="form-control"
+                   required [minlength]="5"
+                   id="pwd"
+                   name="pwd"
+                   #pwd="ngModel"
+                   [(ngModel)]="password"
+                   placeholder="Inserisci la tua password">
+          </div>
+
+
+      </div>                                                                          <!--chiusura labels-->
+      <div class="row col-md-10" style="margin-bottom: 1.5%">
+        <button type="submit"
+                [disabled]="postForm.invalid"
+                class="btn btn-default">Accedi</button>
+      </div>                                                                          <!--chiusura bottone-->
+    </form>                                                                              <!--chiusura log-in-->
+
+
+
+
+
+
+    <div class="row Form col-md-8 col-md-offset-2" style="margin-top: 6%">             <!--inizio scatola registrazione-->
+      <h1 class="Titoli">Non sei iscritto? Unisciti a noi:</h1>
+
+      <button class="btn btn-default Scritte btnLog" style="margin-bottom: 2%; font-size: 28px">
+        <a [routerLink]="['sign-in']" routerLinkActive="active">
+          Registrati</a></button>
+
+    </div>                                                                              <!--chiusura link registrazione-->
+
+  </div>                                                                                  <!--chiusura subcontainer-->
+
+
+
+
+

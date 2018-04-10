@@ -1,0 +1,59 @@
+<nav class="navbar bg-success Scritte" id="barraNav">
+  <!--<div class="container-fluid">-->
+    <div class="navbar-header contNav">
+
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <!-- Dropdown Prodotti-->
+          <li class="dropdown dropdown-large">
+            <a class="dropdown-toggle" data-toggle="dropdown" style="color: black">Prodotti <span class="caret"></span></a>
+
+            <ul class="dropdown-menu dropdown-menu-large row">
+              <li class="col-sm-7">
+                <ul>
+                  <li class="dropdown-header"> TÈ <span class="glyphicon glyphicon-leaf"></span></li>
+                  <li><a href="#">- Aroma Forte con Caffeina</a></li>
+                  <li><a href="#">- Aroma Delicato / Decaffeinato</a></li>
+                  <li><a href="#">- Organico</a></li>
+                </ul>
+              </li>
+
+              <li class="col-sm-5">
+                <ul>
+                  <li class="dropdown-header">STRUMENTI <span class="glyphicon glyphicon-glass"></span></li>
+                  <li><a href="">- Tazze</a></li>
+                  <li><a href="">- Bollitori</a></li>
+                  <li><a href="">- Accessori</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#" style="color: black">Chi Siamo</a></li>
+          <li><a href="#" style="color: black">Contatti</a></li>
+        </ul>
+
+
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Cerca un prodotto" id="ricerca">
+          </div>
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Cerca</button>
+        </form>
+
+
+        <ul class="nav navbar-nav navbar-right" >
+          <li><a [routerLink]="['./log-in']" routerLinkActive="active">Account  <span class="glyphicon glyphicon-user"></span></a></li>
+        </ul>
+
+      </div>
+
+    </div>                                          <!--navbar header-->
+ <!-- </div>  -->                                            <!--container fluid-->
+</nav>

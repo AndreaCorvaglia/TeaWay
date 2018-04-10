@@ -1,0 +1,19 @@
+.bannerSconti{
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+}
+.text-red{
+  color: red;
+}
+
+.bannerSconti:hover{
+  text-decoration: none;
+  color: maroon;
+}
+
+
+.bannerSconti:active{
+  background-color: #a4a400;
+  color:red;
+}

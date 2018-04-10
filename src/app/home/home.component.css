@@ -1,0 +1,10 @@
+.Titolo{
+  background-color: #BDE8BD;
+  border-radius: 2px;
+  border: 1px solid silver;
+}
+
+.Consigliati{
+  border-bottom: silver 1px solid;
+  text-align: center;
+}

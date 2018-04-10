@@ -1,0 +1,12 @@
+.Titoli{
+  font-family: 'Crimsom Text', Serif;
+  text-align: center;
+}
+
+.Scritte{
+  font-family: 'Futura', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
